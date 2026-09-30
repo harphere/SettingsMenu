@@ -1,4 +1,4 @@
-# Settings Menu Hider 1.0.0
+# Settings Menu Hider 1.0.1
 
 Standalone legacy LSPosed / Vector Legacy Bridge module for Android Settings.
 Designed for your Android 16 / Vector phone. Phone compatibility still needs testing.
@@ -7,7 +7,7 @@ Designed for your Android 16 / Vector phone. Phone compatibility still needs tes
 
 1. Extract this ZIP. Upload the **contents** of SettingsMenuHider to a GitHub repository root, including `.github/workflows/build.yml`.
 2. Open Actions → Build APK. The workflow runs on push; it can also be run manually.
-3. Open the completed run. Download **SettingsMenuHider-v1.0.0-APK** under Artifacts.
+3. Open the completed run. Download **SettingsMenuHider-v1.0.1-APK** under Artifacts.
 4. Extract that artifact and install `app-debug.apk`.
 
 No obsolete `tools` SDK package, setup-android action, compileSdk 37 dependency,

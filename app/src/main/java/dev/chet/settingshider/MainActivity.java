@@ -21,7 +21,7 @@ public final class MainActivity extends Activity {
         super.onCreate(state);
         prefs = getSharedPreferences(ConfigProvider.PREFS, 0);
         hidden = new HashSet<>(prefs.getStringSet("hidden", Collections.emptySet()));
-        LinearLayout root = new LinearLayout(this); root.setOrientation(1);
+        LinearLayout root = new LinearLayout(this); root.setOrientation(LinearLayout.VERTICAL);
         root.setPadding(28,48,28,24); setContentView(root);
         TextView title = new TextView(this); title.setText("Settings Menu Hider"); title.setTextSize(25); root.addView(title);
         TextView help = new TextView(this); help.setText("1. Enable this module in LSPosed; scope only Settings.\n2. Reboot, then open the main Settings menu.\n3. Return here and select entries to hide.\nAfter changes, close Settings from Recents and reopen it.\n\nHide only: search and direct links can still open pages."); root.addView(help);
@@ -39,7 +39,7 @@ public final class MainActivity extends Activity {
         });
         status = new TextView(this); root.addView(status);
         ScrollView scroll = new ScrollView(this); root.addView(scroll,new LinearLayout.LayoutParams(-1,0,1));
-        rows = new LinearLayout(this); rows.setOrientation(1); scroll.addView(rows);
+        rows = new LinearLayout(this); rows.setOrientation(LinearLayout.VERTICAL); scroll.addView(rows);
     }
     @Override protected void onResume() { super.onResume(); prefs.registerOnSharedPreferenceChangeListener(listener); render(); }
     @Override protected void onPause() { prefs.unregisterOnSharedPreferenceChangeListener(listener); super.onPause(); }
